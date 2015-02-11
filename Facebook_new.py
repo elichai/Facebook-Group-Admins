@@ -48,7 +48,7 @@ def make_admin(driver):
             pass
     return 0
 
-driver.get("https://www.facebook.com/groups/%s/members/" % GROUP_ID)
+driver.get("https://www.facebook.com/groups/%s/members/?order=date&member_query=" % GROUP_ID)
 driver = connect_facebook(USER_NAME, PASSWORD, driver)
 assert GROUP_NAME in driver.title
 
